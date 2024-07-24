@@ -4,32 +4,32 @@
   "description": "Starter Theme",
   "main": "index.js",
   "dependencies": {
-    "browser-sync": "^2.26.7",
-    "browser-sync-webpack-plugin": "^2.2.2",
+    "browser-sync": "^2.26.14",
+    "browser-sync-webpack-plugin": "^2.3.0",
     "copy-webpack-plugin": "^5.1.1",
     "cross-env": "^7.0.2",
+    "css-loader": "^7.1.2",
     "del": "^5.1.0",
     "glob": "^8.1.0",
-    "laravel-mix": "^5.0.4",
+    "laravel-mix": "^6.0.49",
     "laravel-mix-alias": "^1.0.2",
+    "less": "^4.1.2",
+    "less-loader": "^7.3.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11",
-    "webpack-fix-style-only-entries": "^0.4.0",
-    "webpack-notifier": "^1.15.0",
-    "css-loader": "^3.4.2",
     "style-loader": "^1.1.3",
-    "less": "^4.1.2",
-    "less-loader": "^7.3.0"
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-fix-style-only-entries": "^0.4.0",
+    "webpack-notifier": "^1.15.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.2",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^0.1.0"
   },
   "scripts": {
     "dev": "npm run development",
-    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js --watch",
     "watch": "nodemon --watch webpack.mix.js --exec 'npm run development -- --watch'",
     "prod": "npm run production",
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
